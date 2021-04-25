@@ -24,6 +24,8 @@ class PessoaController {
   * Método: CRUD - realizaremos a primeira opção é Criar um registro
   */
   
+  // criando um registro - .post
+
   static async criaPessoa(req, res) {
     const novaPessoa = req.body;      
     try {
@@ -34,7 +36,7 @@ class PessoaController {
     }
   }
   
-  // atualizar um registro - update
+  // atualizar um registro - .put
   
   static async atualizaPessoa(req, res) {
     const { id } = req.params;
@@ -49,7 +51,8 @@ class PessoaController {
     }
   }
   
-  // deletar registros
+  // deletar registros - .delete
+
   static async apagaPessoa(req, res) {
     const { id } = req.params;
     try {
